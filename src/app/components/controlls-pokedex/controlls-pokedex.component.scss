@@ -1,0 +1,112 @@
+.controlls {
+  background: red;
+  width: 80%;
+  height: 85%;
+  margin: 30px auto;
+  &__router {
+    width: 90%;
+    height: 60%;
+    background: white;
+    padding-top: 5px;
+    margin: 0 auto;
+    border-radius: 25px;
+    -webkit-box-shadow: -1px 1px 13px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 1px 13px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 1px 13px 2px rgba(0, 0, 0, 0.75);
+    &--leds {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 10%;
+      margin: 0px auto 5px auto;
+      &-red {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #cc0000;
+      }
+    }
+    &--screen {
+      width: 80%;
+      height: 70%;
+      background-color: rgb(142, 142, 142);
+      margin: 0px auto;
+      border-radius: 20px;
+      padding: 5px;
+      &-img {
+        width: 100px;
+          margin: 5px auto;
+      }
+      &-name {
+        text-align: center;
+        font-size: 24px;
+        margin: 0;
+      }
+    }
+    &--bottom {
+      width: 80%;
+      margin: 5px auto;
+      display: grid;
+      grid-template-columns: 60% 40%;
+      &-buttom {
+        width: 25px;
+        height: 25px;
+        background: #cc0000;
+        border-radius: 50%;
+
+      }
+      &-horn {
+        margin-left: 20px;
+        &-line {
+          width: 50%;
+          height: 4px;
+          margin-bottom: 3px;
+          background: black;
+        }
+      }
+    }
+  }
+  &__inputs {
+    display: grid;
+    grid-template-columns: 15% 61% 20%;
+    width: 100%;
+    margin: 20px auto;
+    &--circle {
+      width: 40px;
+      height: 40px;
+      background: black;
+      border-radius: 50%;
+    }
+    &--text {
+      width: 90%;
+      &--lights {
+        width: 50%;
+        margin: 5px auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 5px;
+        &-red {
+          width: 30px;
+          height: 7px;
+          background: #fd4646;
+        }
+        &-blue {
+          width: 30px;
+          height: 7px;
+          background: blue;
+        }
+      }
+      input {
+        width: 100%;
+        margin: 15px auto;
+        padding: 10px 5px 60px 5px;
+        @media(max-height: 500px) {
+          padding: 10px 5px 20px 5px;
+        }
+      }
+    }
+    &--arrows--img {
+      width: 60px;
+    }
+  }
+}
+

@@ -1,0 +1,56 @@
+<div class="controlls">
+  <div class="controlls__router">
+    <div class="controlls__router--leds">
+      <div class="controlls__router--leds-red"></div>
+      <div class="controlls__router--leds-red"></div>
+    </div>
+    <div class="controlls__router--screen">
+      <div
+        class="controlls__router--screen-img"
+        *ngIf="pokemonInformation.sprites"
+      >
+        <img [src]="pokemonInformation.sprites.front_default" alt="img" />
+      </div>
+      <p class="controlls__router--screen-name" *ngIf="pokemonInformation.name">
+        {{ pokemonInformation.name }}
+      </p>
+      <p class="controlls__router--screen-name" *ngIf="errorPokemon">
+        Pokémon not found
+      </p>
+    </div>
+    <div class="controlls__router--bottom">
+      <div class="controlls__router--bottom-buttom"></div>
+      <div class="controlls__router--bottom-horn">
+        <div class="controlls__router--bottom-horn-line"></div>
+        <div class="controlls__router--bottom-horn-line"></div>
+        <div class="controlls__router--bottom-horn-line"></div>
+        <div class="controlls__router--bottom-horn-line"></div>
+      </div>
+    </div>
+  </div>
+  <form class="controlls__inputs" [formGroup]="pokemonForm">
+    <button
+      class="controlls__inputs--circle"
+      (click)="searchPokemon()"
+    ></button>
+    <div class="controlls__inputs--text">
+      <div class="controlls__inputs--text--lights">
+        <div class="controlls__inputs--text--lights-red"></div>
+        <div class="controlls__inputs--text--lights-blue"></div>
+      </div>
+      <input
+        formControlName="name"
+        type="text"
+        placeholder="Pokémon"
+        (change)="searchPokemon()"
+      />
+    </div>
+    <div class="controlls__inputs--arrows">
+      <img
+        src="/assets/img/arrows.png"
+        alt=""
+        class="controlls__inputs--arrows--img"
+      />
+    </div>
+  </form>
+</div>
